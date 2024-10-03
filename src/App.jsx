@@ -7,9 +7,7 @@ function App() {
 
   return (
     <>
-     <Navbar/>
-     <Banner/>
-     <Footer/>
+     
     </>
   )
 }
