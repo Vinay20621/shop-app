@@ -1,13 +1,15 @@
 import './App.css'
-
+import Footer from "./Pages/Footer"
+import Navbar from './Components/Navbar'
+import Banner from './Components/Banner'
 function App() {
   
 
   return (
     <>
-     <div className='bg-red-50'>
-      ok 
-     </div>
+     <Navbar/>
+     <Banner/>
+     <Footer/>
     </>
   )
 }
