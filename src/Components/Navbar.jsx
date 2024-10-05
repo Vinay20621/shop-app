@@ -6,7 +6,7 @@ export default function Navbar(){
     return(
         <nav className="flex justify-between w-full h-[90px] sm:px-2 md:px-7 bg-[#29A841]">
             <div className="w-[13rem] sm:w-[9rem] lg:w-[11rem] mt-3">
-            <img className="" src="./public/megamart_logo1.svg"/>
+            <img className="" src="./megamart_logo1.svg"/>
             </div>
             <div className="relative flex items-center mt-5 w-[30%] h-[50px]">
                 <SearchIcon className="absolute left-3 text-gray-500" />
