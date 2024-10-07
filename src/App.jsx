@@ -1,13 +1,14 @@
 import './App.css'
 import Grocery from './Pages/Grocery'
+import LandingPage from './Pages/LandingPage'
 
 function App() {
   
 
   return (
     <>
-     <div className='bg-gray-900'>
-      <Grocery/>
+     <div>
+      <LandingPage/>
      </div>
     </>
   )
