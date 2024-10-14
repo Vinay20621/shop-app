@@ -8,7 +8,7 @@ export default function GroceryPosterCard() {
               <h1>Foodgrains</h1>
             </div>
             <div className="flex   lg:w-1/2 md:w-2/5 sm:w-2/6 min-[560px]:w-[40%] min-[400px]:w-[30%]">
-              <img src="/public/images/Foodgrains.svg" alt="" />
+              <img src="/images/Foodgrains.svg" alt="" />
             </div>
           </div>
         {/* </div> */}
@@ -19,7 +19,7 @@ export default function GroceryPosterCard() {
               <h1>Oil & Ghee</h1>
             </div>
             <div className="flex max-[480px]:w-[150px] ">
-              <img src="/public/images/oil&ghee.svg" alt="" />
+              <img src="/images/oil&ghee.svg" alt="" />
             </div>
           </div>
 
@@ -28,7 +28,7 @@ export default function GroceryPosterCard() {
               <h1>Flours</h1>
             </div>
             <div className="flex max-[480px]:w-[150px]">
-              <img src="/public/images/daal flours.svg" alt="" className="w-64" />
+              <img src="/images/daal flours.svg" alt="" className="w-64" />
             </div>
           </div>
         </div>

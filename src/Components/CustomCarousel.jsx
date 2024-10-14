@@ -9,7 +9,7 @@ export default function CustomCarousel({ items }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slidesToShow, setSlidesToShow] = useState(3);
   const [hoverIndex, setHoverIndex] = useState(null);
-  const carouselRef = useRef(null); // Reference to the carousel container
+  const carouselRef = useRef(null); 
 
   const updateSlidesToShow = () => {
     const screenWidth = window.innerWidth;
@@ -46,7 +46,7 @@ export default function CustomCarousel({ items }) {
     return visibleItems;
   };
 
-  // Swipe/Drag functionality
+ 
   const handleTouchStart = (e) => {
     carouselRef.current.startX = e.touches[0].clientX;
   };
@@ -57,31 +57,31 @@ export default function CustomCarousel({ items }) {
     const currentX = e.touches[0].clientX;
     const difference = carouselRef.current.startX - currentX;
 
-    // Trigger carousel to move based on swipe direction
+ 
     if (difference > 50) {
-      handleNext(); // Swipe left to move to the next item
+      handleNext(); 
       carouselRef.current.startX = null;
     } else if (difference < -50) {
-      handlePrev(); // Swipe right to move to the previous item
+      handlePrev();
       carouselRef.current.startX = null;
     }
   };
 
   return (
     <div
-      className="overflow-x-scroll flex"
+      className="overflow-x-scroll flex scrollbar-hide"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
-      ref={carouselRef} // Reference to the carousel container for swipe detection
+      ref={carouselRef} 
     >
       <div className="w-full lg:p-5 md:px-10 sm:px-6 min-[320px]:p-1 flex-1 justify-between items-center">
         <div className="flex overflow-hidden justify-center">
-          {/* Previous button */}
+         
           <button onClick={handlePrev} className="flex justify-center max-[600px]:hidden items-center">
             <ArrowBackIosIcon />
           </button>
 
-          {/* Carousel container */}
+          
           <div
             className="flex lg:justify-between max-lg:justify-around transition-transform ease-in-out duration-700"
             style={{
@@ -100,7 +100,7 @@ export default function CustomCarousel({ items }) {
               >
                 <Card title={item.title} imageSrc={item.imageSrc} altText={item.title} />
 
-                {/* Show HoverMenu when this item is hovered */}
+               
                 {hoverIndex === index && !(window.innerWidth <= 1024) && (
                   <div className="absolute">
                     <HoverMenu category={items[hoverIndex]} />
@@ -110,7 +110,7 @@ export default function CustomCarousel({ items }) {
             ))}
           </div>
 
-          {/* Next button */}
+         
           <button onClick={handleNext} className="flex justify-center max-[600px]:hidden items-center">
             <ArrowForwardIosIcon />
           </button>
