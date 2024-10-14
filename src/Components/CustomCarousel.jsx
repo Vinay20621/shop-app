@@ -69,7 +69,7 @@ export default function CustomCarousel({ items }) {
 
   return (
     <div
-      className="overflow-x-scroll flex scrollbar-hide"
+      className="overflow-x-scroll scrollbar-hide flex"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       ref={carouselRef} 
