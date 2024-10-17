@@ -1,10 +1,10 @@
 import React, { useState,useEffect } from 'react'
-import { menData} from '../Data/mens';
+import { kidsData} from '../Data/kids';
 
 import './MensPage.css';
 import MensItemPage from './MensItemPage';
 import { useParams } from 'react-router-dom';
-function MensPage() {
+function KidsPages() {
       const [priceRange, setPriceRange] = useState([0, 5000]);
   const [selectedDiscount, setSelectedDiscount] = useState('');
   const [selectedType, setSelectedType] = useState('');
@@ -43,7 +43,7 @@ useEffect(()=>{
   
   const [filteredMenData, setFilteredMenData] = useState([]); 
   useEffect(() => {
-    const updatedFilteredData = menData.filter((item) => {
+    const updatedFilteredData =  kidsData.filter((item) => {
       return (
         (selectedType.length === 0 || selectedType.includes(item.type)) &&
         (selectedBrand.length === 0 || selectedBrand.includes(item.brand)) &&
@@ -55,7 +55,7 @@ useEffect(()=>{
     });
   
     setFilteredMenData(updatedFilteredData); // Update the filtered data state
-  }, [menData, selectedType, selectedBrand, selectedModel, selectedRating, selectedDiscount, priceRange]); // Re-run filter when any dependency changes
+  }, [ kidsData, selectedType, selectedBrand, selectedModel, selectedRating, selectedDiscount, priceRange]); // Re-run filter when any dependency changes
   
   
 
@@ -79,12 +79,10 @@ useEffect(()=>{
       model: filter==='model'? !prevState.model : false,
     }));
   };
-
-  const [sortedMenData, setSortedMenData] = useState(filteredMenData); // Initialize with original menData
-
+  const [sortedMenData, setSortedMenData] = useState(filteredMenData);
 
   const handleSort = (sortType) => {
-    let sortedData = [...filteredMenData]; // Copy the original data
+    let sortedData = [...filteredMenData]; 
 
     switch (sortType) {
       case 'relevant': 
@@ -561,7 +559,4 @@ useEffect(()=>{
   
 }
 
-export default MensPage
-
-
-
+export default KidsPages

@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from 'react'
-import { menData} from '../Data/mens';
+import { womenData} from '../Data/women';
 
 import './MensPage.css';
 import MensItemPage from './MensItemPage';
@@ -43,7 +43,7 @@ useEffect(()=>{
   
   const [filteredMenData, setFilteredMenData] = useState([]); 
   useEffect(() => {
-    const updatedFilteredData = menData.filter((item) => {
+    const updatedFilteredData =  womenData.filter((item) => {
       return (
         (selectedType.length === 0 || selectedType.includes(item.type)) &&
         (selectedBrand.length === 0 || selectedBrand.includes(item.brand)) &&
@@ -55,7 +55,7 @@ useEffect(()=>{
     });
   
     setFilteredMenData(updatedFilteredData); // Update the filtered data state
-  }, [menData, selectedType, selectedBrand, selectedModel, selectedRating, selectedDiscount, priceRange]); // Re-run filter when any dependency changes
+  }, [ womenData, selectedType, selectedBrand, selectedModel, selectedRating, selectedDiscount, priceRange]); // Re-run filter when any dependency changes
   
   
 
@@ -562,6 +562,3 @@ useEffect(()=>{
 }
 
 export default MensPage
-
-
-
