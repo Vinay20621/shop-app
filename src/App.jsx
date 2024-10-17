@@ -19,14 +19,12 @@ function App() {
     <>
     <Navbar bgColor="#E9E9E9" />
     <Routes>
-      <Route path='/' element={<FashionPage/>}/>
+      <Route path='/' element={<LandingPage/>}/>
+      <Route path='/fashion' element={<FashionPage/>}/>      
       <Route path='/category/men' element={<MensPage/>}/>  
       <Route path='/category/women' element={<WomenPage/>}/>  
       <Route path='/category/baby-kids' element={<KidsPages/>}/>  
-      <Route path='/grocery' element={<GroceryPages/>}/>  
-
-
-
+      <Route path='/grocery' element={<GroceryPages/>}/> 
         
     </Routes>
      <Footer bgColor="#D5006D" />
