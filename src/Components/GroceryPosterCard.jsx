@@ -1,26 +1,38 @@
-/* eslint-disable react/prop-types */
-import { PosterData } from "../Data/PosterData";
-
-export default function GroceryPosterCard({ indexId }) {
-  const filteredItems = PosterData;
-  const item = filteredItems[indexId];
-
-  if (!item) {
-    return <div className="text-red-500">Item not found</div>; 
-  }
-
+export default function GroceryPosterCard() {
   return (
-    <div className="flex flex-row  mt-2 mb-2 bg-customBeige  overflow-hidden">
-      <div className="flex justify-start sm:p-6 md:p-8 lg:p-10">
-        <h1 className="lg:text-3xl md:text-3xl sm:text-2xl font-semibold text-customGreen">{item.title}</h1>
+    <>
+      <div className="flex justify-between max-w-full max-lg:flex-col ">
+        {/* <div className="flex w-full "> */}
+          <div className="flex lg:w-full  justify-between bg-customBeige m-2 ">
+            <div className="flex text-customGreen md:text-2xl text-3xl max-[480px]:text-2xl font-semibold py-10 px-5">
+              <h1>Foodgrains</h1>
+            </div>
+            <div className="flex   lg:w-1/2 md:w-2/5 sm:w-2/6 min-[560px]:w-[40%] min-[400px]:w-[30%]">
+              <img src="/images/Foodgrains.svg" alt="" />
+            </div>
+          </div>
+        {/* </div> */}
+
+        <div className="flex-col flex w-full ">
+          <div className="flex justify-between bg-customBeige  m-2">
+            <div className="flex text-customGreen md:text-2xl text-3xl max-[480px]:text-2xl font-semibold py-10 px-5">
+              <h1>Oil & Ghee</h1>
+            </div>
+            <div className="flex max-[480px]:w-[150px] ">
+              <img src="/images/oil&ghee.svg" alt="" />
+            </div>
+          </div>
+
+          <div className="flex justify-between bg-customBeige m-2">
+            <div className="flex text-customGreen md:text-2xl text-3xl max-[480px]:text-2xl font-semibold py-10 px-5 " >
+              <h1>Flours</h1>
+            </div>
+            <div className="flex max-[480px]:w-[150px]">
+              <img src="/images/daal flours.svg" alt="" className="w-64" />
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="flex justify-end items-end p-1">
-        <img
-          src={item.imageSrc}
-          alt={item.title}
-          className="lg:w-[80%] sm:w-[80%] md:w-[100%] "
-        />
-      </div>
-    </div>
+    </>
   );
 }
