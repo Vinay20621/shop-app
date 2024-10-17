@@ -1,0 +1,21 @@
+export const Beautydata = [
+    { name: "Sunscreen", img: "https://via.placeholder.com/120" },
+    { name: "Sunscreen", img: "https://via.placeholder.com/120" },
+    { name: "Sunscreen", img: "https://via.placeholder.com/120" },
+    { name: "Sunscreen", img: "https://via.placeholder.com/120" },
+    { name: "Sunscreen", img: "https://via.placeholder.com/120" },
+    { name: "Sunscreen", img: "https://via.placeholder.com/120" },
+    { name: "Sunscreen", img: "https://via.placeholder.com/120" },
+    { name: "Sunscreen", img: "https://via.placeholder.com/120" },
+    { name: "Sunscreen", img: "https://via.placeholder.com/120" },
+    { name: "Sunscreen", img: "https://via.placeholder.com/120" },
+    { name: "Sunscreen", img: "https://via.placeholder.com/120" },
+    { name: "Sunscreen", img: "https://via.placeholder.com/120" },
+    { name: "Sunscreen", img: "https://via.placeholder.com/120" },
+    { name: "Sunscreen", img: "https://via.placeholder.com/120" },
+    { name: "Sunscreen", img: "https://via.placeholder.com/120" },
+    { name: "Sunscreen", img: "https://via.placeholder.com/120" },
+    { name: "Sunscreen", img: "https://via.placeholder.com/120" },
+    { name: "Sunscreen", img: "https://via.placeholder.com/120" },
+    
+  ];
